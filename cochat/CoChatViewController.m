@@ -7,6 +7,7 @@
 //
 
 #import "CoChatViewController.h"
+#import "CoTabBarController.h"
 
 @interface CoChatViewController ()
 
@@ -18,7 +19,6 @@
 {
     [super viewDidLoad];
     self.navigationItem.title = @"众信";
-    
 }
 
 - (void)didReceiveMemoryWarning

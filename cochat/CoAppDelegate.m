@@ -17,6 +17,11 @@
     
     CoTabBarController *coTabBarController = [[CoTabBarController alloc]init];
     self.window.rootViewController = coTabBarController;
+    
+    [coTabBarController badge:0 withValue:6];
+    [coTabBarController badge:2];
+    
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 6; // 设置右上角的icon信息条数提醒
 
     // 设置顶部状态栏
     [UIApplication sharedApplication].statusBarHidden = NO;
