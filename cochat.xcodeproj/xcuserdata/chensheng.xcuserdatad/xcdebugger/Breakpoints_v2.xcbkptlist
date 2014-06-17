@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "cochat/CoTabBarController.m"
-            timestampString = "424710709.654774"
+            timestampString = "424710897.720618"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "-creatCustomTabBar"
             landmarkType = "5">
          </BreakpointContent>

@@ -134,6 +134,7 @@
     if (!badge) {
         badge = [[MKNumberBadgeView alloc]initWithFrame:CGRectMake(button.frame.size.width - 42, 0, 32, 20)];
         badge.hideWhenZero = YES;
+        badge.font = [UIFont boldSystemFontOfSize:11];
         [self setUpBadge:badge atIndex:index];
         [button addSubview:badge];
     }
@@ -147,6 +148,7 @@
     MKNumberBadgeView *badge = (MKNumberBadgeView *)[button viewWithTag:(10 + index)];
     if (!badge) {
         badge = [[MKNumberBadgeView alloc]initWithFrame:CGRectMake(button.frame.size.width - 31, 5, 10, 10)];
+        badge.font = [UIFont boldSystemFontOfSize:5];
         [self setUpBadge:badge atIndex:index];
         badge.value = 0;
         [button addSubview:badge];
@@ -159,7 +161,6 @@
     badge.strokeWidth = 0;
     badge.shadow = NO;
     badge.shine = NO;
-    badge.font = [UIFont boldSystemFontOfSize:11];
     badge.tag = 10 + index;
 }
 
