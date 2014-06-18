@@ -34,7 +34,7 @@
     NSMutableString *title = [NSMutableString stringWithString:TITLE];
     if (number > 0) {
         if (number < 100) {
-            [title appendString:[NSString stringWithFormat:@"(%u)", number]];
+            [title appendString:[NSString stringWithFormat:@"(%lu)", (unsigned long)number]];
         } else {
             [title appendString:@"(99+)"];
         }
