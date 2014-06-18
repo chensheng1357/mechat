@@ -136,8 +136,8 @@
     if (!badge) {
         badge = [[MKNumberBadgeView alloc]initWithFrame:CGRectMake(button.frame.size.width - 42, 0, 32, 20)];
         badge.hideWhenZero = YES;
-        badge.font = [UIFont boldSystemFontOfSize:11];
-        [self setUpBadge:badge atIndex:index];
+        badge.font = [UIFont boldSystemFontOfSize:12];
+        [self setupBadge:badge atIndex:index];
         [button addSubview:badge];
     }
     badge.value = value;
@@ -151,14 +151,14 @@
     if (!badge) {
         badge = [[MKNumberBadgeView alloc]initWithFrame:CGRectMake(button.frame.size.width - 31, 5, 10, 10)];
         badge.font = [UIFont boldSystemFontOfSize:5];
-        [self setUpBadge:badge atIndex:index];
+        [self setupBadge:badge atIndex:index];
         badge.value = NO;
         [button addSubview:badge];
     }
 }
 
 // 徽章设置
-- (void)setUpBadge:(MKNumberBadgeView *)badge atIndex:(NSInteger)index
+- (void)setupBadge:(MKNumberBadgeView *)badge atIndex:(NSInteger)index
 {
     badge.strokeWidth = 0;
     badge.shadow = NO;

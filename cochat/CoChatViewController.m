@@ -19,7 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.title = TITLE;
+    [self setInfoNumber:6];
 }
 
 - (void)didReceiveMemoryWarning
@@ -32,10 +32,14 @@
 - (void)setInfoNumber:(NSUInteger)number
 {
     NSMutableString *title = [NSMutableString stringWithString:TITLE];
-    if (number != 0) {
-        [title stringByAppendingFormat:@"(%lu)", (unsigned long)number];
+    if (number > 0) {
+        if (number < 100) {
+            [title appendString:[NSString stringWithFormat:@"(%u)", number]];
+        } else {
+            [title appendString:@"(99+)"];
+        }
     }
-    self.navigationController.title = title;
+    self.title = title;
 }
 
 @end
