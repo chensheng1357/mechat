@@ -17,6 +17,8 @@
 #define NormalImages @[@"tabbar_mainframe",@"tabbar_contacts",@"tabbar_discover",@"tabbar_me"]
 #define SelectedImages @[@"tabbar_mainframeHL",@"tabbar_contactsHL",@"tabbar_discoverHL",@"tabbar_meHL"]
 #define TabBarTitles @[@"众信", @"通讯录", @"发现", @"我"]
+#define ButtonTagFlag 100
+#define BadgeTagFlag 10
 
 @interface CoTabBarController ()
 @property (nonatomic, strong)UIView *tabBarView;
@@ -102,14 +104,14 @@
 
 -(void)clickedButton:(UIButton *)button
 {
-    UIButton *currentButton = (UIButton *)[self.tabBarView viewWithTag:(100 + self.selectedIndex)];
+    UIButton *currentButton = (UIButton *)[self.tabBarView viewWithTag:(ButtonTagFlag + self.selectedIndex)];
     if (![button isEqual:currentButton]) { // 点击是其它按钮
         [currentButton setBackgroundImage:[UIImage imageNamed:[NormalImages objectAtIndex:self.selectedIndex]]
                                  forState:UIControlStateNormal];
         [currentButton setTitleColor:[UIColor grayColor]
                             forState:UIControlStateNormal];
         
-        self.selectedIndex = button.tag - 100; // 取得按钮索引;
+        self.selectedIndex = button.tag - ButtonTagFlag; // 取得按钮索引;
         [button setBackgroundImage:[UIImage imageNamed:[SelectedImages objectAtIndex:self.selectedIndex]]
                           forState:UIControlStateNormal];
         [button setTitleColor:[UIColor whiteColor]
@@ -120,7 +122,7 @@
 // 获取指定索引的按钮
 - (UIButton *)buttonAtIndex:(NSUInteger)index
 {
-    if (index < 4) {
+    if (index < [TabBarTitles count]) {
         return (UIButton *)[self.tabBarView viewWithTag:index];
     }
     return  nil;
@@ -129,8 +131,8 @@
 // 显示消息条数徽章
 - (void)badge:(NSInteger)index withValue:(NSInteger)value
 {
-    UIButton *button = (UIButton *)[self.tabBarView viewWithTag:(100 + index)];
-    MKNumberBadgeView *badge = (MKNumberBadgeView *)[button viewWithTag:(10 + index)];
+    UIButton *button = (UIButton *)[self.tabBarView viewWithTag:(ButtonTagFlag + index)];
+    MKNumberBadgeView *badge = (MKNumberBadgeView *)[button viewWithTag:(BadgeTagFlag + index)];
     if (!badge) {
         badge = [[MKNumberBadgeView alloc]initWithFrame:CGRectMake(button.frame.size.width - 42, 0, 32, 20)];
         badge.hideWhenZero = YES;
@@ -144,13 +146,13 @@
 // 显示消息红点徽章
 - (void)badge:(NSUInteger)index
 {
-    UIButton *button = (UIButton *)[self.tabBarView viewWithTag:(100 + index)];
-    MKNumberBadgeView *badge = (MKNumberBadgeView *)[button viewWithTag:(10 + index)];
+    UIButton *button = (UIButton *)[self.tabBarView viewWithTag:(ButtonTagFlag + index)];
+    MKNumberBadgeView *badge = (MKNumberBadgeView *)[button viewWithTag:(BadgeTagFlag + index)];
     if (!badge) {
         badge = [[MKNumberBadgeView alloc]initWithFrame:CGRectMake(button.frame.size.width - 31, 5, 10, 10)];
         badge.font = [UIFont boldSystemFontOfSize:5];
         [self setUpBadge:badge atIndex:index];
-        badge.value = 0;
+        badge.value = NO;
         [button addSubview:badge];
     }
 }
@@ -161,14 +163,14 @@
     badge.strokeWidth = 0;
     badge.shadow = NO;
     badge.shine = NO;
-    badge.tag = 10 + index;
+    badge.tag = BadgeTagFlag + index;
 }
 
 // 移除徽章
 - (void)removeBadge:(NSUInteger)index
 {
-    UIButton *button = (UIButton *)[self.tabBarView viewWithTag:(100 + index)];
-    [[button viewWithTag:(10 + index)]removeFromSuperview];
+    UIButton *button = (UIButton *)[self.tabBarView viewWithTag:(ButtonTagFlag + index)];
+    [[button viewWithTag:(BadgeTagFlag + index)]removeFromSuperview];
 }
 
 - (void)didReceiveMemoryWarning

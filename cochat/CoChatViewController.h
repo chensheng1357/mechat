@@ -9,5 +9,5 @@
 #import "BaseViewController.h"
 
 @interface CoChatViewController : BaseViewController
-
+- (void)setInfoNumber:(NSUInteger)number;
 @end

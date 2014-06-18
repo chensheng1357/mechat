@@ -13,18 +13,29 @@
 
 @end
 
+#define TITLE @"众信"
 @implementation CoChatViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.navigationItem.title = @"众信";
+    self.navigationItem.title = TITLE;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+// 设置当前信息条数
+- (void)setInfoNumber:(NSUInteger)number
+{
+    NSMutableString *title = [NSMutableString stringWithString:TITLE];
+    if (number != 0) {
+        [title stringByAppendingFormat:@"(%lu)", (unsigned long)number];
+    }
+    self.navigationController.title = title;
 }
 
 @end

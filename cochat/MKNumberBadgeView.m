@@ -127,7 +127,7 @@
 	NSString* numberString;
     if (self.value > 99) {
         numberString = @"99+";
-    } else if (self.value == 0) {
+    } else if (self.value == NO) { // 没有信息则显示红点
         numberString = @"";
     } else {
         numberString = [NSString stringWithFormat:self.textFormat,self.value];
