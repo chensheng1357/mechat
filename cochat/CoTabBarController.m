@@ -61,7 +61,7 @@
 
 - (void)creatCustomTabBar
 {
-//    self.tabBar.hidden = YES;
+    self.tabBar.hidden = YES;
     self.tabBarView = [[UIView alloc] initWithFrame:CGRectMake(0, [[UIScreen mainScreen] bounds].size.height - 49, 640, 49)];
     UIImageView *bgImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 640, 49)];
     [bgImgView setImage:[UIImage imageNamed:@"tabbarBkg"]];
