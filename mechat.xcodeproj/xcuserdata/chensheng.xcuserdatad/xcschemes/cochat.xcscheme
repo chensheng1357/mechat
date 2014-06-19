@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3468EA10195051D900149B4E"
                BuildableName = "cochat.app"
-               BlueprintName = "cochat"
-               ReferencedContainer = "container:cochat.xcodeproj">
+               BlueprintName = "mechat"
+               ReferencedContainer = "container:mechat.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3468EA2B195051DA00149B4E"
                BuildableName = "cochatTests.xctest"
-               BlueprintName = "cochatTests"
-               ReferencedContainer = "container:cochat.xcodeproj">
+               BlueprintName = "mechatTests"
+               ReferencedContainer = "container:mechat.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3468EA10195051D900149B4E"
             BuildableName = "cochat.app"
-            BlueprintName = "cochat"
-            ReferencedContainer = "container:cochat.xcodeproj">
+            BlueprintName = "mechat"
+            ReferencedContainer = "container:mechat.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3468EA10195051D900149B4E"
             BuildableName = "cochat.app"
-            BlueprintName = "cochat"
-            ReferencedContainer = "container:cochat.xcodeproj">
+            BlueprintName = "mechat"
+            ReferencedContainer = "container:mechat.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3468EA10195051D900149B4E"
             BuildableName = "cochat.app"
-            BlueprintName = "cochat"
-            ReferencedContainer = "container:cochat.xcodeproj">
+            BlueprintName = "mechat"
+            ReferencedContainer = "container:mechat.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

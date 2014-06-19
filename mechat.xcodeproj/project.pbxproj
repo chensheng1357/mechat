@@ -49,20 +49,20 @@
 		342F692D19527012006EAC2E /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		342F692E19527012006EAC2E /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		342F692F19527012006EAC2E /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
-		3468EA11195051D900149B4E /* cochat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cochat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3468EA11195051D900149B4E /* mechat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mechat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3468EA14195051D900149B4E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3468EA16195051D900149B4E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3468EA18195051D900149B4E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		3468EA1C195051D900149B4E /* cochat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "cochat-Info.plist"; sourceTree = "<group>"; };
+		3468EA1C195051D900149B4E /* mechat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mechat-Info.plist"; sourceTree = "<group>"; };
 		3468EA1E195051D900149B4E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3468EA20195051D900149B4E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3468EA22195051D900149B4E /* cochat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cochat-Prefix.pch"; sourceTree = "<group>"; };
+		3468EA22195051D900149B4E /* mechat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mechat-Prefix.pch"; sourceTree = "<group>"; };
 		3468EA23195051D900149B4E /* CoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoAppDelegate.h; sourceTree = "<group>"; };
 		3468EA24195051D900149B4E /* CoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoAppDelegate.m; sourceTree = "<group>"; };
 		3468EA26195051D900149B4E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3468EA2C195051DA00149B4E /* cochatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cochatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3468EA2C195051DA00149B4E /* mechatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mechatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3468EA2D195051DA00149B4E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		3468EA35195051DA00149B4E /* cochatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "cochatTests-Info.plist"; sourceTree = "<group>"; };
+		3468EA35195051DA00149B4E /* mechatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mechatTests-Info.plist"; sourceTree = "<group>"; };
 		3468EA37195051DA00149B4E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3468EA39195051DA00149B4E /* cochatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cochatTests.m; sourceTree = "<group>"; };
 		3468EA461950534600149B4E /* CoNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoNavigationController.h; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 		3468EA08195051D900149B4E = {
 			isa = PBXGroup;
 			children = (
-				3468EA1A195051D900149B4E /* cochat */,
+				3468EA1A195051D900149B4E /* mechat */,
 				3468EA33195051DA00149B4E /* cochatTests */,
 				3468EA13195051D900149B4E /* Frameworks */,
 				3468EA12195051D900149B4E /* Products */,
@@ -124,8 +124,8 @@
 		3468EA12195051D900149B4E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3468EA11195051D900149B4E /* cochat.app */,
-				3468EA2C195051DA00149B4E /* cochatTests.xctest */,
+				3468EA11195051D900149B4E /* mechat.app */,
+				3468EA2C195051DA00149B4E /* mechatTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,7 +141,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3468EA1A195051D900149B4E /* cochat */ = {
+		3468EA1A195051D900149B4E /* mechat */ = {
 			isa = PBXGroup;
 			children = (
 				3468EA451950525300149B4E /* vendor */,
@@ -152,16 +152,17 @@
 				3468EA26195051D900149B4E /* Images.xcassets */,
 				3468EA1B195051D900149B4E /* Supporting Files */,
 			);
+			name = mechat;
 			path = cochat;
 			sourceTree = "<group>";
 		};
 		3468EA1B195051D900149B4E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3468EA1C195051D900149B4E /* cochat-Info.plist */,
+				3468EA1C195051D900149B4E /* mechat-Info.plist */,
 				3468EA1D195051D900149B4E /* InfoPlist.strings */,
 				3468EA20195051D900149B4E /* main.m */,
-				3468EA22195051D900149B4E /* cochat-Prefix.pch */,
+				3468EA22195051D900149B4E /* mechat-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -178,7 +179,7 @@
 		3468EA34195051DA00149B4E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3468EA35195051DA00149B4E /* cochatTests-Info.plist */,
+				3468EA35195051DA00149B4E /* mechatTests-Info.plist */,
 				3468EA36195051DA00149B4E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -231,9 +232,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3468EA10195051D900149B4E /* cochat */ = {
+		3468EA10195051D900149B4E /* mechat */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3468EA3D195051DA00149B4E /* Build configuration list for PBXNativeTarget "cochat" */;
+			buildConfigurationList = 3468EA3D195051DA00149B4E /* Build configuration list for PBXNativeTarget "mechat" */;
 			buildPhases = (
 				3468EA0D195051D900149B4E /* Sources */,
 				3468EA0E195051D900149B4E /* Frameworks */,
@@ -243,14 +244,14 @@
 			);
 			dependencies = (
 			);
-			name = cochat;
+			name = mechat;
 			productName = cochat;
-			productReference = 3468EA11195051D900149B4E /* cochat.app */;
+			productReference = 3468EA11195051D900149B4E /* mechat.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3468EA2B195051DA00149B4E /* cochatTests */ = {
+		3468EA2B195051DA00149B4E /* mechatTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3468EA40195051DA00149B4E /* Build configuration list for PBXNativeTarget "cochatTests" */;
+			buildConfigurationList = 3468EA40195051DA00149B4E /* Build configuration list for PBXNativeTarget "mechatTests" */;
 			buildPhases = (
 				3468EA28195051DA00149B4E /* Sources */,
 				3468EA29195051DA00149B4E /* Frameworks */,
@@ -261,9 +262,9 @@
 			dependencies = (
 				3468EA32195051DA00149B4E /* PBXTargetDependency */,
 			);
-			name = cochatTests;
+			name = mechatTests;
 			productName = cochatTests;
-			productReference = 3468EA2C195051DA00149B4E /* cochatTests.xctest */;
+			productReference = 3468EA2C195051DA00149B4E /* mechatTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -281,7 +282,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3468EA0C195051D900149B4E /* Build configuration list for PBXProject "cochat" */;
+			buildConfigurationList = 3468EA0C195051D900149B4E /* Build configuration list for PBXProject "mechat" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -293,8 +294,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3468EA10195051D900149B4E /* cochat */,
-				3468EA2B195051DA00149B4E /* cochatTests */,
+				3468EA10195051D900149B4E /* mechat */,
+				3468EA2B195051DA00149B4E /* mechatTests */,
 			);
 		};
 /* End PBXProject section */
@@ -356,7 +357,7 @@
 /* Begin PBXTargetDependency section */
 		3468EA32195051DA00149B4E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3468EA10195051D900149B4E /* cochat */;
+			target = 3468EA10195051D900149B4E /* mechat */;
 			targetProxy = 3468EA31195051DA00149B4E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -457,9 +458,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "cochat/cochat-Prefix.pch";
-				INFOPLIST_FILE = "cochat/cochat-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "cochat/mechat-Prefix.pch";
+				INFOPLIST_FILE = "cochat/mechat-Info.plist";
+				PRODUCT_NAME = mechat;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -470,9 +471,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "cochat/cochat-Prefix.pch";
-				INFOPLIST_FILE = "cochat/cochat-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "cochat/mechat-Prefix.pch";
+				INFOPLIST_FILE = "cochat/mechat-Info.plist";
+				PRODUCT_NAME = mechat;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -492,8 +493,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "cochatTests/cochatTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "cochatTests/mechatTests-Info.plist";
+				PRODUCT_NAME = mechatTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -510,8 +511,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cochat/cochat-Prefix.pch";
-				INFOPLIST_FILE = "cochatTests/cochatTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "cochatTests/mechatTests-Info.plist";
+				PRODUCT_NAME = mechatTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -520,7 +521,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3468EA0C195051D900149B4E /* Build configuration list for PBXProject "cochat" */ = {
+		3468EA0C195051D900149B4E /* Build configuration list for PBXProject "mechat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3468EA3B195051DA00149B4E /* Debug */,
@@ -529,7 +530,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3468EA3D195051DA00149B4E /* Build configuration list for PBXNativeTarget "cochat" */ = {
+		3468EA3D195051DA00149B4E /* Build configuration list for PBXNativeTarget "mechat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3468EA3E195051DA00149B4E /* Debug */,
@@ -538,7 +539,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3468EA40195051DA00149B4E /* Build configuration list for PBXNativeTarget "cochatTests" */ = {
+		3468EA40195051DA00149B4E /* Build configuration list for PBXNativeTarget "mechatTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3468EA41195051DA00149B4E /* Debug */,
