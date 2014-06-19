@@ -8,6 +8,7 @@
 
 #import "CoChatViewController.h"
 #import "CoTabBarController.h"
+#import "TestViewController.h"
 
 @interface CoChatViewController ()
 
@@ -20,7 +21,19 @@
 {
     [super viewDidLoad];
     [self setInfoNumber:6];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                                          target:self
+                                                                                          action:@selector(go:)];
 }
+
+- (void)go:(UIBarButtonItem *)sender
+{
+    TestViewController *testViewController = [[TestViewController alloc]initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:testViewController animated:YES];
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {

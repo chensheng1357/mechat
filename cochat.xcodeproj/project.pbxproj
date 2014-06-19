@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		342F693019527012006EAC2E /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 342F692E19527012006EAC2E /* TestViewController.m */; };
+		342F693119527012006EAC2E /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 342F692F19527012006EAC2E /* TestViewController.xib */; };
 		3468EA15195051D900149B4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3468EA14195051D900149B4E /* Foundation.framework */; };
 		3468EA17195051D900149B4E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3468EA16195051D900149B4E /* CoreGraphics.framework */; };
 		3468EA19195051D900149B4E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3468EA18195051D900149B4E /* UIKit.framework */; };
@@ -44,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		342F692D19527012006EAC2E /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		342F692E19527012006EAC2E /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		342F692F19527012006EAC2E /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		3468EA11195051D900149B4E /* cochat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cochat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3468EA14195051D900149B4E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3468EA16195051D900149B4E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -200,6 +205,9 @@
 				3468EA5E195054CC00149B4E /* CoMeViewController.h */,
 				3468EA5F195054CC00149B4E /* CoMeViewController.m */,
 				3468EA60195054CC00149B4E /* CoMeViewController.xib */,
+				342F692D19527012006EAC2E /* TestViewController.h */,
+				342F692E19527012006EAC2E /* TestViewController.m */,
+				342F692F19527012006EAC2E /* TestViewController.xib */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -301,6 +309,7 @@
 				3468EA58195053FF00149B4E /* CoContactsViewController.xib in Resources */,
 				3468EA53195053D300149B4E /* CoChatViewController.xib in Resources */,
 				3468EA62195054CC00149B4E /* CoMeViewController.xib in Resources */,
+				342F693119527012006EAC2E /* TestViewController.xib in Resources */,
 				3468EA27195051D900149B4E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +336,7 @@
 				3468EA52195053D300149B4E /* CoChatViewController.m in Sources */,
 				3468EA5C195054BA00149B4E /* CoDiscoverViewController.m in Sources */,
 				3468EA4B1950537300149B4E /* CoTabBarController.m in Sources */,
+				342F693019527012006EAC2E /* TestViewController.m in Sources */,
 				3468EA21195051D900149B4E /* main.m in Sources */,
 				3468EA57195053FF00149B4E /* CoContactsViewController.m in Sources */,
 				3468EA481950534600149B4E /* CoNavigationController.m in Sources */,
