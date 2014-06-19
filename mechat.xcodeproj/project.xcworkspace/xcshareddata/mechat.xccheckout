@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6D69BD5D-9752-4A33-BC75-43828369B5E7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>mechat</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D35F6BFD-CE02-487D-B83D-EAB7EC2BD4E0</key>
+		<string>https://github.com/chensheng1357/mechat.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>mechat.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D35F6BFD-CE02-487D-B83D-EAB7EC2BD4E0</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/chensheng1357/mechat.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D35F6BFD-CE02-487D-B83D-EAB7EC2BD4E0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D35F6BFD-CE02-487D-B83D-EAB7EC2BD4E0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>mechat</string>
+		</dict>
+	</array>
+</dict>
+</plist>

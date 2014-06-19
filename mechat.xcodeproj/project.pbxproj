@@ -1,0 +1,551 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		34F7ABEE19531D7D00F2604E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F7ABED19531D7D00F2604E /* Foundation.framework */; };
+		34F7ABF019531D7D00F2604E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F7ABEF19531D7D00F2604E /* CoreGraphics.framework */; };
+		34F7ABF219531D7D00F2604E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F7ABF119531D7D00F2604E /* UIKit.framework */; };
+		34F7ABF819531D7D00F2604E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 34F7ABF619531D7D00F2604E /* InfoPlist.strings */; };
+		34F7ABFA19531D7D00F2604E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7ABF919531D7D00F2604E /* main.m */; };
+		34F7ABFE19531D7D00F2604E /* CoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7ABFD19531D7D00F2604E /* CoAppDelegate.m */; };
+		34F7AC0019531D7D00F2604E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34F7ABFF19531D7D00F2604E /* Images.xcassets */; };
+		34F7AC0719531D7D00F2604E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F7AC0619531D7D00F2604E /* XCTest.framework */; };
+		34F7AC0819531D7D00F2604E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F7ABED19531D7D00F2604E /* Foundation.framework */; };
+		34F7AC0919531D7D00F2604E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F7ABF119531D7D00F2604E /* UIKit.framework */; };
+		34F7AC1119531D7D00F2604E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 34F7AC0F19531D7D00F2604E /* InfoPlist.strings */; };
+		34F7AC1319531D7D00F2604E /* mechatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7AC1219531D7D00F2604E /* mechatTests.m */; };
+		34F7AC2119531E3900F2604E /* MKNumberBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7AC2019531E3900F2604E /* MKNumberBadgeView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		34F7AC2419531E8500F2604E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7AC2319531E8500F2604E /* BaseViewController.m */; };
+		34F7AC2719531F0300F2604E /* CoNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7AC2619531F0300F2604E /* CoNavigationController.m */; };
+		34F7AC2A19531F4A00F2604E /* CoTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7AC2919531F4A00F2604E /* CoTabBarController.m */; };
+		34F7AC3319531FAA00F2604E /* CoChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7AC3119531FAA00F2604E /* CoChatViewController.m */; };
+		34F7AC3419531FAA00F2604E /* CoChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34F7AC3219531FAA00F2604E /* CoChatViewController.xib */; };
+		34F7AC381953203000F2604E /* CoContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7AC361953203000F2604E /* CoContactsViewController.m */; };
+		34F7AC391953203000F2604E /* CoContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34F7AC371953203000F2604E /* CoContactsViewController.xib */; };
+		34F7AC3D1953205B00F2604E /* CoDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7AC3B1953205B00F2604E /* CoDiscoverViewController.m */; };
+		34F7AC3E1953205B00F2604E /* CoDiscoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34F7AC3C1953205B00F2604E /* CoDiscoverViewController.xib */; };
+		34F7AC421953208B00F2604E /* CoMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7AC401953208B00F2604E /* CoMeViewController.m */; };
+		34F7AC431953208B00F2604E /* CoMeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34F7AC411953208B00F2604E /* CoMeViewController.xib */; };
+		34F7AC47195320FE00F2604E /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7AC45195320FE00F2604E /* TestViewController.m */; };
+		34F7AC48195320FE00F2604E /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34F7AC46195320FE00F2604E /* TestViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		34F7AC0A19531D7D00F2604E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34F7ABE219531D7D00F2604E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34F7ABE919531D7D00F2604E;
+			remoteInfo = mechat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		34F7ABEA19531D7D00F2604E /* mechat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mechat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		34F7ABED19531D7D00F2604E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		34F7ABEF19531D7D00F2604E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		34F7ABF119531D7D00F2604E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		34F7ABF519531D7D00F2604E /* mechat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mechat-Info.plist"; sourceTree = "<group>"; };
+		34F7ABF719531D7D00F2604E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		34F7ABF919531D7D00F2604E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		34F7ABFB19531D7D00F2604E /* mechat-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mechat-Prefix.pch"; sourceTree = "<group>"; };
+		34F7ABFC19531D7D00F2604E /* CoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoAppDelegate.h; sourceTree = "<group>"; };
+		34F7ABFD19531D7D00F2604E /* CoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoAppDelegate.m; sourceTree = "<group>"; };
+		34F7ABFF19531D7D00F2604E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		34F7AC0519531D7D00F2604E /* mechatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mechatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		34F7AC0619531D7D00F2604E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		34F7AC0E19531D7D00F2604E /* mechatTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mechatTests-Info.plist"; sourceTree = "<group>"; };
+		34F7AC1019531D7D00F2604E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		34F7AC1219531D7D00F2604E /* mechatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mechatTests.m; sourceTree = "<group>"; };
+		34F7AC1F19531E3900F2604E /* MKNumberBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKNumberBadgeView.h; sourceTree = "<group>"; };
+		34F7AC2019531E3900F2604E /* MKNumberBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKNumberBadgeView.m; sourceTree = "<group>"; };
+		34F7AC2219531E8500F2604E /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		34F7AC2319531E8500F2604E /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		34F7AC2519531F0300F2604E /* CoNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoNavigationController.h; sourceTree = "<group>"; };
+		34F7AC2619531F0300F2604E /* CoNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoNavigationController.m; sourceTree = "<group>"; };
+		34F7AC2819531F4A00F2604E /* CoTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTabBarController.h; sourceTree = "<group>"; };
+		34F7AC2919531F4A00F2604E /* CoTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTabBarController.m; sourceTree = "<group>"; };
+		34F7AC3019531FAA00F2604E /* CoChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoChatViewController.h; sourceTree = "<group>"; };
+		34F7AC3119531FAA00F2604E /* CoChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoChatViewController.m; sourceTree = "<group>"; };
+		34F7AC3219531FAA00F2604E /* CoChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoChatViewController.xib; sourceTree = "<group>"; };
+		34F7AC351953203000F2604E /* CoContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoContactsViewController.h; sourceTree = "<group>"; };
+		34F7AC361953203000F2604E /* CoContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoContactsViewController.m; sourceTree = "<group>"; };
+		34F7AC371953203000F2604E /* CoContactsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoContactsViewController.xib; sourceTree = "<group>"; };
+		34F7AC3A1953205B00F2604E /* CoDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoDiscoverViewController.h; sourceTree = "<group>"; };
+		34F7AC3B1953205B00F2604E /* CoDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoDiscoverViewController.m; sourceTree = "<group>"; };
+		34F7AC3C1953205B00F2604E /* CoDiscoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoDiscoverViewController.xib; sourceTree = "<group>"; };
+		34F7AC3F1953208B00F2604E /* CoMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoMeViewController.h; sourceTree = "<group>"; };
+		34F7AC401953208B00F2604E /* CoMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoMeViewController.m; sourceTree = "<group>"; };
+		34F7AC411953208B00F2604E /* CoMeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoMeViewController.xib; sourceTree = "<group>"; };
+		34F7AC44195320FE00F2604E /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		34F7AC45195320FE00F2604E /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		34F7AC46195320FE00F2604E /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		34F7ABE719531D7D00F2604E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34F7ABF019531D7D00F2604E /* CoreGraphics.framework in Frameworks */,
+				34F7ABF219531D7D00F2604E /* UIKit.framework in Frameworks */,
+				34F7ABEE19531D7D00F2604E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34F7AC0219531D7D00F2604E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34F7AC0719531D7D00F2604E /* XCTest.framework in Frameworks */,
+				34F7AC0919531D7D00F2604E /* UIKit.framework in Frameworks */,
+				34F7AC0819531D7D00F2604E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		34F7ABE119531D7D00F2604E = {
+			isa = PBXGroup;
+			children = (
+				34F7ABF319531D7D00F2604E /* mechat */,
+				34F7AC0C19531D7D00F2604E /* mechatTests */,
+				34F7ABEC19531D7D00F2604E /* Frameworks */,
+				34F7ABEB19531D7D00F2604E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		34F7ABEB19531D7D00F2604E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				34F7ABEA19531D7D00F2604E /* mechat.app */,
+				34F7AC0519531D7D00F2604E /* mechatTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		34F7ABEC19531D7D00F2604E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34F7ABED19531D7D00F2604E /* Foundation.framework */,
+				34F7ABEF19531D7D00F2604E /* CoreGraphics.framework */,
+				34F7ABF119531D7D00F2604E /* UIKit.framework */,
+				34F7AC0619531D7D00F2604E /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		34F7ABF319531D7D00F2604E /* mechat */ = {
+			isa = PBXGroup;
+			children = (
+				34F7AC1E19531E2700F2604E /* model */,
+				34F7AC1D19531E2000F2604E /* controller */,
+				34F7AC1C19531E1A00F2604E /* vendor */,
+				34F7ABFC19531D7D00F2604E /* CoAppDelegate.h */,
+				34F7ABFD19531D7D00F2604E /* CoAppDelegate.m */,
+				34F7ABFF19531D7D00F2604E /* Images.xcassets */,
+				34F7ABF419531D7D00F2604E /* Supporting Files */,
+			);
+			path = mechat;
+			sourceTree = "<group>";
+		};
+		34F7ABF419531D7D00F2604E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				34F7ABF519531D7D00F2604E /* mechat-Info.plist */,
+				34F7ABF619531D7D00F2604E /* InfoPlist.strings */,
+				34F7ABF919531D7D00F2604E /* main.m */,
+				34F7ABFB19531D7D00F2604E /* mechat-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		34F7AC0C19531D7D00F2604E /* mechatTests */ = {
+			isa = PBXGroup;
+			children = (
+				34F7AC1219531D7D00F2604E /* mechatTests.m */,
+				34F7AC0D19531D7D00F2604E /* Supporting Files */,
+			);
+			path = mechatTests;
+			sourceTree = "<group>";
+		};
+		34F7AC0D19531D7D00F2604E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				34F7AC0E19531D7D00F2604E /* mechatTests-Info.plist */,
+				34F7AC0F19531D7D00F2604E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		34F7AC1C19531E1A00F2604E /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				34F7AC1F19531E3900F2604E /* MKNumberBadgeView.h */,
+				34F7AC2019531E3900F2604E /* MKNumberBadgeView.m */,
+			);
+			name = vendor;
+			sourceTree = "<group>";
+		};
+		34F7AC1D19531E2000F2604E /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				34F7AC2219531E8500F2604E /* BaseViewController.h */,
+				34F7AC2319531E8500F2604E /* BaseViewController.m */,
+				34F7AC2519531F0300F2604E /* CoNavigationController.h */,
+				34F7AC2619531F0300F2604E /* CoNavigationController.m */,
+				34F7AC2819531F4A00F2604E /* CoTabBarController.h */,
+				34F7AC2919531F4A00F2604E /* CoTabBarController.m */,
+				34F7AC3019531FAA00F2604E /* CoChatViewController.h */,
+				34F7AC3119531FAA00F2604E /* CoChatViewController.m */,
+				34F7AC3219531FAA00F2604E /* CoChatViewController.xib */,
+				34F7AC351953203000F2604E /* CoContactsViewController.h */,
+				34F7AC361953203000F2604E /* CoContactsViewController.m */,
+				34F7AC371953203000F2604E /* CoContactsViewController.xib */,
+				34F7AC3A1953205B00F2604E /* CoDiscoverViewController.h */,
+				34F7AC3B1953205B00F2604E /* CoDiscoverViewController.m */,
+				34F7AC3C1953205B00F2604E /* CoDiscoverViewController.xib */,
+				34F7AC3F1953208B00F2604E /* CoMeViewController.h */,
+				34F7AC401953208B00F2604E /* CoMeViewController.m */,
+				34F7AC411953208B00F2604E /* CoMeViewController.xib */,
+				34F7AC44195320FE00F2604E /* TestViewController.h */,
+				34F7AC45195320FE00F2604E /* TestViewController.m */,
+				34F7AC46195320FE00F2604E /* TestViewController.xib */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		34F7AC1E19531E2700F2604E /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		34F7ABE919531D7D00F2604E /* mechat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34F7AC1619531D7D00F2604E /* Build configuration list for PBXNativeTarget "mechat" */;
+			buildPhases = (
+				34F7ABE619531D7D00F2604E /* Sources */,
+				34F7ABE719531D7D00F2604E /* Frameworks */,
+				34F7ABE819531D7D00F2604E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mechat;
+			productName = mechat;
+			productReference = 34F7ABEA19531D7D00F2604E /* mechat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		34F7AC0419531D7D00F2604E /* mechatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34F7AC1919531D7D00F2604E /* Build configuration list for PBXNativeTarget "mechatTests" */;
+			buildPhases = (
+				34F7AC0119531D7D00F2604E /* Sources */,
+				34F7AC0219531D7D00F2604E /* Frameworks */,
+				34F7AC0319531D7D00F2604E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34F7AC0B19531D7D00F2604E /* PBXTargetDependency */,
+			);
+			name = mechatTests;
+			productName = mechatTests;
+			productReference = 34F7AC0519531D7D00F2604E /* mechatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		34F7ABE219531D7D00F2604E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Co;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Ruaho Technology";
+				TargetAttributes = {
+					34F7AC0419531D7D00F2604E = {
+						TestTargetID = 34F7ABE919531D7D00F2604E;
+					};
+				};
+			};
+			buildConfigurationList = 34F7ABE519531D7D00F2604E /* Build configuration list for PBXProject "mechat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 34F7ABE119531D7D00F2604E;
+			productRefGroup = 34F7ABEB19531D7D00F2604E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				34F7ABE919531D7D00F2604E /* mechat */,
+				34F7AC0419531D7D00F2604E /* mechatTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		34F7ABE819531D7D00F2604E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34F7ABF819531D7D00F2604E /* InfoPlist.strings in Resources */,
+				34F7AC391953203000F2604E /* CoContactsViewController.xib in Resources */,
+				34F7AC3419531FAA00F2604E /* CoChatViewController.xib in Resources */,
+				34F7AC3E1953205B00F2604E /* CoDiscoverViewController.xib in Resources */,
+				34F7AC431953208B00F2604E /* CoMeViewController.xib in Resources */,
+				34F7AC48195320FE00F2604E /* TestViewController.xib in Resources */,
+				34F7AC0019531D7D00F2604E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34F7AC0319531D7D00F2604E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34F7AC1119531D7D00F2604E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		34F7ABE619531D7D00F2604E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34F7ABFE19531D7D00F2604E /* CoAppDelegate.m in Sources */,
+				34F7AC2419531E8500F2604E /* BaseViewController.m in Sources */,
+				34F7AC3D1953205B00F2604E /* CoDiscoverViewController.m in Sources */,
+				34F7AC2719531F0300F2604E /* CoNavigationController.m in Sources */,
+				34F7ABFA19531D7D00F2604E /* main.m in Sources */,
+				34F7AC3319531FAA00F2604E /* CoChatViewController.m in Sources */,
+				34F7AC381953203000F2604E /* CoContactsViewController.m in Sources */,
+				34F7AC47195320FE00F2604E /* TestViewController.m in Sources */,
+				34F7AC2119531E3900F2604E /* MKNumberBadgeView.m in Sources */,
+				34F7AC421953208B00F2604E /* CoMeViewController.m in Sources */,
+				34F7AC2A19531F4A00F2604E /* CoTabBarController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34F7AC0119531D7D00F2604E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34F7AC1319531D7D00F2604E /* mechatTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		34F7AC0B19531D7D00F2604E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34F7ABE919531D7D00F2604E /* mechat */;
+			targetProxy = 34F7AC0A19531D7D00F2604E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		34F7ABF619531D7D00F2604E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34F7ABF719531D7D00F2604E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		34F7AC0F19531D7D00F2604E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34F7AC1019531D7D00F2604E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		34F7AC1419531D7D00F2604E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		34F7AC1519531D7D00F2604E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		34F7AC1719531D7D00F2604E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mechat/mechat-Prefix.pch";
+				INFOPLIST_FILE = "mechat/mechat-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		34F7AC1819531D7D00F2604E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mechat/mechat-Prefix.pch";
+				INFOPLIST_FILE = "mechat/mechat-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		34F7AC1A19531D7D00F2604E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/mechat.app/mechat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mechat/mechat-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "mechatTests/mechatTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		34F7AC1B19531D7D00F2604E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/mechat.app/mechat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "mechat/mechat-Prefix.pch";
+				INFOPLIST_FILE = "mechatTests/mechatTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		34F7ABE519531D7D00F2604E /* Build configuration list for PBXProject "mechat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34F7AC1419531D7D00F2604E /* Debug */,
+				34F7AC1519531D7D00F2604E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34F7AC1619531D7D00F2604E /* Build configuration list for PBXNativeTarget "mechat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34F7AC1719531D7D00F2604E /* Debug */,
+				34F7AC1819531D7D00F2604E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		34F7AC1919531D7D00F2604E /* Build configuration list for PBXNativeTarget "mechatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34F7AC1A19531D7D00F2604E /* Debug */,
+				34F7AC1B19531D7D00F2604E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 34F7ABE219531D7D00F2604E /* Project object */;
+}
