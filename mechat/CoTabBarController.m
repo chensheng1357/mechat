@@ -72,7 +72,8 @@
 - (UIButton *)createButton:(int)index
 {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setFrame:CGRectMake(80 * index, 0, 81, 49)];
+    CGRect frame = self.tabBar.frame;
+    [button setFrame:CGRectMake(frame.size.width / 4 * index, 0, frame.size.width / 4, frame.size.height)];
     [button setTitle:TabBarTitles[index] forState:UIControlStateNormal];
     [button.titleLabel setFont:[UIFont boldSystemFontOfSize:10]];
     [button setTitleEdgeInsets:UIEdgeInsetsMake(0, 0, -30, 0)]; // 设置文字位置

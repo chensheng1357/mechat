@@ -10,7 +10,7 @@
 #import "TestViewController.h"
 
 @interface CoChatViewController ()
-
+@property (nonatomic, strong)UITableView *tableView;
 @end
 
 #define TITLE @"众信"
@@ -33,6 +33,16 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                                                                           target:self
                                                                                           action:@selector(go:)];
+    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+    CGFloat statusHeight = [[UIApplication sharedApplication]statusBarFrame].size.height;
+    CGFloat navigationHeight = self.navigationController.navigationBar.frame.size.height;
+    CGRect frame = CGRectMake(0, 0, self.view.frame.size.width, screenHeight - (statusHeight + navigationHeight));
+    self.tableView = [[UITableView alloc]initWithFrame:frame style:UITableViewStylePlain];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:TableViewCellIdentifier];
+    self.tableView.dataSource = self;
+    self.tableView.autoresizesSubviews = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
+    [self.view addSubview:self.tableView];
 }
 
 - (void)go:(UIBarButtonItem *)sender
@@ -61,5 +71,51 @@
     }
     self.navigationItem.title = title;
 }
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    if ([tableView isEqual:self.tableView]) {
+        return 3;
+    }
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if ([tableView isEqual:self.tableView]) {
+        switch (section) {
+            case 0: {
+                return 30;
+                break;
+            }
+            case 1: {
+                return 5;
+                break;
+            }
+            case 2: {
+                return 8;
+                break;
+            }
+        }
+    }
+    return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell;
+    if ([tableView isEqual:self.tableView]) {
+        cell = [tableView dequeueReusableCellWithIdentifier:TableViewCellIdentifier forIndexPath:indexPath];
+        cell.textLabel.text = [NSString stringWithFormat:@"Section %ld, Cell %ld", (long)indexPath.section, (long)indexPath.row];
+        if (indexPath.section == 0) {
+            cell.accessoryType = UITableViewCellAccessoryDetailButton;
+        } else {
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        }
+    }
+    return cell;
+}
+
+
 
 @end
