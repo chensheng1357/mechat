@@ -50,7 +50,7 @@
         }
             
         case 1: {
-            return 2;
+            return 3;
             break;
         }
             
@@ -110,6 +110,14 @@
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        return 88.0f;
+    }
+    return 44.0f;
+}
+
 - (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     
     if (section == 0){
@@ -120,6 +128,10 @@
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    
+    if (section == 3) {
+        return 30.0f;
+    }
     
     return 10.0f;
     
