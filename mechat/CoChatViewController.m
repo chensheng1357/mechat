@@ -16,15 +16,6 @@
 #define TITLE @"众信"
 @implementation CoChatViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -117,5 +108,32 @@
 }
 
 
+// 是否显示上下文菜单
+- (BOOL)tableView:(UITableView *)tableView
+   shouldShowMenuForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    /* Allow the context menu to be displayed on every cell */
+    return YES;
+    
+}
+
+// 指定的action是否出现在菜单里，这里全部出现
+- (BOOL) tableView:(UITableView *)tableView
+   canPerformAction:(SEL)action
+  forRowAtIndexPath:(NSIndexPath *)indexPath
+         withSender:(id)sender {
+    
+    NSLog(@"%@", NSStringFromSelector(action));
+    
+    /* Allow every action for now */
+    return YES;
+}
+
+- (void) tableView:(UITableView *)tableView
+      performAction:(SEL)action
+  forRowAtIndexPath:(NSIndexPath *)indexPath
+         withSender:(id)sender {
+    
+}
 
 @end

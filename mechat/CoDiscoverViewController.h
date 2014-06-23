@@ -8,6 +8,7 @@
 
 #import "BaseViewController.h"
 
+static NSString *ContactsTableViewCellIdentifier = @"ContactsTableViewCells";
 @interface CoDiscoverViewController : BaseViewController
 
 @end

@@ -8,6 +8,7 @@
 
 #import "BaseViewController.h"
 
+static NSString *MeTableViewCellIdentifier = @"MeTableViewCells";
 @interface CoMeViewController : BaseViewController
 
 @end
