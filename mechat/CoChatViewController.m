@@ -9,8 +9,9 @@
 #import "CoChatViewController.h"
 #import "TestViewController.h"
 
-@interface CoChatViewController ()
+@interface CoChatViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong)UITableView *tableView;
+@property (nonatomic, strong)UISearchBar *searchBar;
 @end
 
 #define TITLE @"众信"
@@ -19,35 +20,56 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.navigationItem.title = @"众信";
     [self setInfoNumber:6];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
-                                                                                          target:self
-                                                                                          action:@selector(go:)];
     CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
     CGFloat statusHeight = [[UIApplication sharedApplication]statusBarFrame].size.height;
     CGFloat navigationHeight = self.navigationController.navigationBar.frame.size.height;
     CGRect frame = CGRectMake(0, 0, self.view.frame.size.width, screenHeight - (statusHeight + navigationHeight));
     self.tableView = [[UITableView alloc]initWithFrame:frame style:UITableViewStylePlain];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:TableViewCellIdentifier];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ChatTableViewCellIdentifier];
     self.tableView.dataSource = self;
+    self.tableView.delegate = self;
     self.tableView.autoresizesSubviews = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
     [self.view addSubview:self.tableView];
 }
 
-- (void)go:(UIBarButtonItem *)sender
+#pragma mark - TableView Delegate and DataSource
+
+// 总共有多少节
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    TestViewController *testViewController = [[TestViewController alloc]initWithNibName:nil bundle:nil];
-    testViewController.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:testViewController animated:YES];
+    return 1;
 }
 
-- (void)didReceiveMemoryWarning
+// 每一节都有几行
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    return 20;
 }
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = nil;
+    if ([tableView isEqual:self.tableView]) {
+        cell = [tableView dequeueReusableCellWithIdentifier:ChatTableViewCellIdentifier forIndexPath:indexPath];
+        [cell.textLabel setFont:[UIFont boldSystemFontOfSize:18]];
+        cell.textLabel.text = @"测试";
+    }
+    return cell;
+}
+
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - set title
 
 // 设置当前信息条数
 - (void)setInfoNumber:(NSUInteger)number
@@ -63,77 +85,10 @@
     self.navigationItem.title = title;
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (void)didReceiveMemoryWarning
 {
-    if ([tableView isEqual:self.tableView]) {
-        return 3;
-    }
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    if ([tableView isEqual:self.tableView]) {
-        switch (section) {
-            case 0: {
-                return 30;
-                break;
-            }
-            case 1: {
-                return 5;
-                break;
-            }
-            case 2: {
-                return 8;
-                break;
-            }
-        }
-    }
-    return 0;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell;
-    if ([tableView isEqual:self.tableView]) {
-        cell = [tableView dequeueReusableCellWithIdentifier:TableViewCellIdentifier forIndexPath:indexPath];
-        cell.textLabel.text = [NSString stringWithFormat:@"Section %ld, Cell %ld", (long)indexPath.section, (long)indexPath.row];
-        if (indexPath.section == 0) {
-            cell.accessoryType = UITableViewCellAccessoryDetailButton;
-        } else {
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        }
-    }
-    return cell;
-}
-
-
-// 是否显示上下文菜单
-- (BOOL)tableView:(UITableView *)tableView
-   shouldShowMenuForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    /* Allow the context menu to be displayed on every cell */
-    return YES;
-    
-}
-
-// 指定的action是否出现在菜单里，这里全部出现
-- (BOOL) tableView:(UITableView *)tableView
-   canPerformAction:(SEL)action
-  forRowAtIndexPath:(NSIndexPath *)indexPath
-         withSender:(id)sender {
-    
-    NSLog(@"%@", NSStringFromSelector(action));
-    
-    /* Allow every action for now */
-    return YES;
-}
-
-- (void) tableView:(UITableView *)tableView
-      performAction:(SEL)action
-  forRowAtIndexPath:(NSIndexPath *)indexPath
-         withSender:(id)sender {
-    
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 @end

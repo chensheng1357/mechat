@@ -34,6 +34,8 @@
     [self.view addSubview:self.tableView];
 }
 
+#pragma mark - TableView Delegate and DataSource
+
 // 总共有多少节
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -135,6 +137,11 @@
     
     return 10.0f;
     
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 

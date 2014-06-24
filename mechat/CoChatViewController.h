@@ -8,7 +8,7 @@
 
 #import "BaseViewController.h"
 
-static NSString *TableViewCellIdentifier = @"TableViewCells";
-@interface CoChatViewController : BaseViewController<UITableViewDataSource>
+static NSString *ChatTableViewCellIdentifier = @"ChatTableViewCells";
+@interface CoChatViewController : BaseViewController
 - (void)setInfoNumber:(NSUInteger)number;
 @end
