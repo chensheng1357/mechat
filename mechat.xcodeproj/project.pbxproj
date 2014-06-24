@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34CB341C19590E0700381721 /* Top100FamousPersons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34CB341B19590E0700381721 /* Top100FamousPersons.plist */; };
 		34F7ABEE19531D7D00F2604E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F7ABED19531D7D00F2604E /* Foundation.framework */; };
 		34F7ABF019531D7D00F2604E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F7ABEF19531D7D00F2604E /* CoreGraphics.framework */; };
 		34F7ABF219531D7D00F2604E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F7ABF119531D7D00F2604E /* UIKit.framework */; };
@@ -27,8 +28,6 @@
 		34F7AC381953203000F2604E /* CoContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7AC361953203000F2604E /* CoContactsViewController.m */; };
 		34F7AC3D1953205B00F2604E /* CoDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7AC3B1953205B00F2604E /* CoDiscoverViewController.m */; };
 		34F7AC421953208B00F2604E /* CoMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7AC401953208B00F2604E /* CoMeViewController.m */; };
-		34F7AC47195320FE00F2604E /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34F7AC45195320FE00F2604E /* TestViewController.m */; };
-		34F7AC48195320FE00F2604E /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34F7AC46195320FE00F2604E /* TestViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34CB341B19590E0700381721 /* Top100FamousPersons.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Top100FamousPersons.plist; sourceTree = "<group>"; };
 		34F7ABEA19531D7D00F2604E /* mechat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mechat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34F7ABED19531D7D00F2604E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		34F7ABEF19531D7D00F2604E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -74,9 +74,6 @@
 		34F7AC3B1953205B00F2604E /* CoDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoDiscoverViewController.m; sourceTree = "<group>"; };
 		34F7AC3F1953208B00F2604E /* CoMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoMeViewController.h; sourceTree = "<group>"; };
 		34F7AC401953208B00F2604E /* CoMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoMeViewController.m; sourceTree = "<group>"; };
-		34F7AC44195320FE00F2604E /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		34F7AC45195320FE00F2604E /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
-		34F7AC46195320FE00F2604E /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +147,7 @@
 		34F7ABF419531D7D00F2604E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				34CB341B19590E0700381721 /* Top100FamousPersons.plist */,
 				34F7ABF519531D7D00F2604E /* mechat-Info.plist */,
 				34F7ABF619531D7D00F2604E /* InfoPlist.strings */,
 				34F7ABF919531D7D00F2604E /* main.m */,
@@ -202,9 +200,6 @@
 				34F7AC3B1953205B00F2604E /* CoDiscoverViewController.m */,
 				34F7AC3F1953208B00F2604E /* CoMeViewController.h */,
 				34F7AC401953208B00F2604E /* CoMeViewController.m */,
-				34F7AC44195320FE00F2604E /* TestViewController.h */,
-				34F7AC45195320FE00F2604E /* TestViewController.m */,
-				34F7AC46195320FE00F2604E /* TestViewController.xib */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -293,8 +288,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				34F7ABF819531D7D00F2604E /* InfoPlist.strings in Resources */,
-				34F7AC48195320FE00F2604E /* TestViewController.xib in Resources */,
 				34F7AC0019531D7D00F2604E /* Images.xcassets in Resources */,
+				34CB341C19590E0700381721 /* Top100FamousPersons.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +315,6 @@
 				34F7ABFA19531D7D00F2604E /* main.m in Sources */,
 				34F7AC3319531FAA00F2604E /* CoChatViewController.m in Sources */,
 				34F7AC381953203000F2604E /* CoContactsViewController.m in Sources */,
-				34F7AC47195320FE00F2604E /* TestViewController.m in Sources */,
 				34F7AC2119531E3900F2604E /* MKNumberBadgeView.m in Sources */,
 				34F7AC421953208B00F2604E /* CoMeViewController.m in Sources */,
 				34F7AC2A19531F4A00F2604E /* CoTabBarController.m in Sources */,

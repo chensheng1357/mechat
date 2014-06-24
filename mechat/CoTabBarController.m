@@ -63,7 +63,7 @@
     NSUInteger tabBarCount = [TabBarTitles count];
     for (int i = 0; i < tabBarCount; i++) {
         UIButton *button = [self createButton:i];
-        button.tag = 100 + i;
+        button.tag = ButtonTagFlag + i;
         [self.tabBar insertSubview:button atIndex:i];
         [self.tabBar bringSubviewToFront:button];
     }
@@ -174,16 +174,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end

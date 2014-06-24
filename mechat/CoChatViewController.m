@@ -7,11 +7,12 @@
 //
 
 #import "CoChatViewController.h"
-#import "TestViewController.h"
 
-@interface CoChatViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface CoChatViewController ()<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate>
 @property (nonatomic, strong)UITableView *tableView;
 @property (nonatomic, strong)UISearchBar *searchBar;
+@property (nonatomic, strong) UISearchDisplayController *strongSearchDisplayController;
+@property (nonatomic, copy) NSArray *famousPersons;
 @end
 
 #define TITLE @"众信"
@@ -21,9 +22,13 @@
 {
     [super viewDidLoad];
     
+    // 加载plist数据c
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Top100FamousPersons" ofType:@"plist"];
+    self.famousPersons = [[NSArray alloc] initWithContentsOfFile:path];
+    
     self.navigationItem.title = @"众信";
     [self setInfoNumber:6];
-    
+
     CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
     CGFloat statusHeight = [[UIApplication sharedApplication]statusBarFrame].size.height;
     CGFloat navigationHeight = self.navigationController.navigationBar.frame.size.height;
@@ -35,7 +40,21 @@
     self.tableView.autoresizesSubviews = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
     [self.view addSubview:self.tableView];
+
+//    self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectZero];
+//    self.searchBar.placeholder = @"Search";
+//    self.searchBar.delegate = self;
+//    
+//    [self.searchBar sizeToFit];
+//    
+//    self.strongSearchDisplayController = [[UISearchDisplayController alloc] initWithSearchBar:self.searchBar contentsController:self];
+//    self.searchDisplayController.searchResultsDataSource = self;
+//    self.searchDisplayController.searchResultsDelegate = self;
+//    self.searchDisplayController.delegate = self;
+    
+
 }
+
 
 #pragma mark - TableView Delegate and DataSource
 
@@ -48,7 +67,7 @@
 // 每一节都有几行
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;
+    return [self.famousPersons count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -57,7 +76,7 @@
     if ([tableView isEqual:self.tableView]) {
         cell = [tableView dequeueReusableCellWithIdentifier:ChatTableViewCellIdentifier forIndexPath:indexPath];
         [cell.textLabel setFont:[UIFont boldSystemFontOfSize:18]];
-        cell.textLabel.text = @"测试";
+        cell.textLabel.text = self.famousPersons[indexPath.row];
     }
     return cell;
 }
