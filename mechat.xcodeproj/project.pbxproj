@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		34CB341C19590E0700381721 /* Top100FamousPersons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34CB341B19590E0700381721 /* Top100FamousPersons.plist */; };
+		34CB342519593E5100381721 /* header.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 34CB342419593E5100381721 /* header.jpeg */; };
 		34F7ABEE19531D7D00F2604E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F7ABED19531D7D00F2604E /* Foundation.framework */; };
 		34F7ABF019531D7D00F2604E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F7ABEF19531D7D00F2604E /* CoreGraphics.framework */; };
 		34F7ABF219531D7D00F2604E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F7ABF119531D7D00F2604E /* UIKit.framework */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		34CB341B19590E0700381721 /* Top100FamousPersons.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Top100FamousPersons.plist; sourceTree = "<group>"; };
+		34CB342419593E5100381721 /* header.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = header.jpeg; sourceTree = "<group>"; };
 		34F7ABEA19531D7D00F2604E /* mechat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mechat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34F7ABED19531D7D00F2604E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		34F7ABEF19531D7D00F2604E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -147,6 +149,7 @@
 		34F7ABF419531D7D00F2604E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				34CB342419593E5100381721 /* header.jpeg */,
 				34CB341B19590E0700381721 /* Top100FamousPersons.plist */,
 				34F7ABF519531D7D00F2604E /* mechat-Info.plist */,
 				34F7ABF619531D7D00F2604E /* InfoPlist.strings */,
@@ -288,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34F7ABF819531D7D00F2604E /* InfoPlist.strings in Resources */,
+				34CB342519593E5100381721 /* header.jpeg in Resources */,
 				34F7AC0019531D7D00F2604E /* Images.xcassets in Resources */,
 				34CB341C19590E0700381721 /* Top100FamousPersons.plist in Resources */,
 			);

@@ -73,13 +73,25 @@
 {
     UITableViewCell *cell = nil;
     if ([tableView isEqual:self.tableView]) {
-        cell = [tableView dequeueReusableCellWithIdentifier:MeTableViewCellIdentifier forIndexPath:indexPath];
+        if (indexPath.section == 0) {
+            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:MeTableViewCellIdentifier];
+            [cell.detailTextLabel setFont:[UIFont systemFontOfSize:14]];
+        } else {
+            cell = [tableView dequeueReusableCellWithIdentifier:MeTableViewCellIdentifier forIndexPath:indexPath];
+        }
         [cell.textLabel setFont:[UIFont boldSystemFontOfSize:18]];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         switch (indexPath.section) {
             case 0: {
                 cell.textLabel.text = @"陈胜";
-                cell.imageView.image = [UIImage imageNamed:@"ff_IconShowAlbum"];
+                cell.detailTextLabel.text = @"众信号：chensheng@ruaho.com";
+                NSString *path = [[NSBundle mainBundle] pathForResource:@"header" ofType:@"jpeg"];
+                UIImage *image = [UIImage imageWithContentsOfFile:path];
+                cell.imageView.image = [self resizeImage:image forSize:CGSizeMake(68, 68)];;
+                
+                // 设置图片圆角
+                cell.imageView.layer.cornerRadius = 5;
+                cell.imageView.layer.masksToBounds = YES;
                 break;
             }
             case 1: {
@@ -144,6 +156,16 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+// 设置图片大小
+- (UIImage *)resizeImage:(UIImage *)image forSize:(CGSize)size
+{
+    UIGraphicsBeginImageContext(size);
+    CGRect imageRect = CGRectMake(0.0, 0.0, size.width, size.height);
+    [image drawInRect:imageRect];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
 
 - (void)didReceiveMemoryWarning
 {
