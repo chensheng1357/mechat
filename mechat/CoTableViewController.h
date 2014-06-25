@@ -14,6 +14,6 @@ static NSString *TableViewCellIdentifier = @"TableViewCells";
 @property (nonatomic, strong, readonly) UITableView *tableView;
 @property (nonatomic, strong) NSString *tableViewCellIdentifier;
 
-- (instancetype)initWithTableViewStyle:(UITableViewStyle)style;
+- (instancetype)initWithStyle:(UITableViewStyle)style;
 
 @end

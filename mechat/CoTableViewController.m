@@ -16,9 +16,12 @@
 @implementation CoTableViewController
 
 // 使用UITableViewStyle来构造Table View
-- (instancetype)initWithTableViewStyle:(UITableViewStyle)style
+- (instancetype)initWithStyle:(UITableViewStyle)style
 {
-    self.style = style;
+    self = [super init]; // 必须调用否则会出现莫名其妙的问题
+    if (self) {
+        self.style = style;
+    }
     return self;
 }
 
