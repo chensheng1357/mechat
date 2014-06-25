@@ -8,8 +8,7 @@
 
 #import "CoMeViewController.h"
 
-@interface CoMeViewController ()<UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, strong) UITableView *tableView;
+@interface CoMeViewController ()
 @end
 
 @implementation CoMeViewController
@@ -18,20 +17,11 @@
 {
     [super viewDidLoad];
     self.navigationItem.title = @"我";
-    
-    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
-    CGFloat statusHeight = [[UIApplication sharedApplication]statusBarFrame].size.height;
-    CGFloat navigationHeight = self.navigationController.navigationBar.frame.size.height;
-    CGRect frame = CGRectMake(0, 0, self.view.frame.size.width, screenHeight - (statusHeight + navigationHeight));
-    self.tableView = [[UITableView alloc]initWithFrame:frame style:UITableViewStyleGrouped];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:MeTableViewCellIdentifier];
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    self.tableView.autoresizesSubviews = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    self.tableView.sectionHeaderHeight = 0;
-    self.tableView.sectionFooterHeight = 0;
-    
-    [self.view addSubview:self.tableView];
+}
+
+- (NSString *)tableViewCellIdentifier
+{
+    return @"MeTableViewCells";
 }
 
 #pragma mark - TableView Delegate and DataSource
@@ -74,10 +64,10 @@
     UITableViewCell *cell = nil;
     if ([tableView isEqual:self.tableView]) {
         if (indexPath.section == 0) {
-            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:MeTableViewCellIdentifier];
+            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:self.tableViewCellIdentifier];
             [cell.detailTextLabel setFont:[UIFont systemFontOfSize:14]];
         } else {
-            cell = [tableView dequeueReusableCellWithIdentifier:MeTableViewCellIdentifier forIndexPath:indexPath];
+            cell = [tableView dequeueReusableCellWithIdentifier:self.tableViewCellIdentifier forIndexPath:indexPath];
         }
         [cell.textLabel setFont:[UIFont boldSystemFontOfSize:18]];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;

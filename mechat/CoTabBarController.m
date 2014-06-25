@@ -36,8 +36,8 @@
 {
     CoChatViewController *coChatViewController = [[CoChatViewController alloc]init];
     CoContactsViewController *coContactsViewController = [[CoContactsViewController alloc]init];
-    CoDiscoverViewController *coDiscoverViewController = [[CoDiscoverViewController alloc]init];
-    CoMeViewController *coMeViewController = [[CoMeViewController alloc]init];
+    CoDiscoverViewController *coDiscoverViewController = [[CoDiscoverViewController alloc]initWithTableStyle:UITableViewStyleGrouped];
+    CoMeViewController *coMeViewController = [[CoMeViewController alloc]initWithTableStyle:UITableViewStyleGrouped];
     
     CoNavigationController *coChatNavigationController =
     [[CoNavigationController alloc]initWithRootViewController:coChatViewController];

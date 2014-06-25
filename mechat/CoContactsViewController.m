@@ -20,6 +20,11 @@
     self.navigationItem.title = @"通讯录";
 }
 
+- (NSString *)textInputContextIdentifier
+{
+    return @"ContactsTableViewCells";
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

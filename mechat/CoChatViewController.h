@@ -6,9 +6,8 @@
 //  Copyright (c) 2014年 Ruaho Technology. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "CoSearchBarTableViewController.h"
 
-static NSString *ChatTableViewCellIdentifier = @"ChatTableViewCells";
-@interface CoChatViewController : BaseViewController
+@interface CoChatViewController : CoSearchBarTableViewController
 - (void)setInfoNumber:(NSUInteger)number;
 @end

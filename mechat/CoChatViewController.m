@@ -9,8 +9,6 @@
 #import "CoChatViewController.h"
 
 @interface CoChatViewController ()<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate>
-@property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) UISearchBar *searchBar;
 @property (nonatomic, strong) UISearchDisplayController *strongSearchDisplayController;
 @property (nonatomic, copy) NSArray *famousPersons;
 @end
@@ -28,33 +26,11 @@
     
     self.navigationItem.title = @"众信";
     [self setInfoNumber:6];
-    
-    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
-    CGFloat statusHeight = [[UIApplication sharedApplication]statusBarFrame].size.height;
-    CGFloat navigationHeight = self.navigationController.navigationBar.frame.size.height;
-    CGRect frame = CGRectMake(0, 0, self.view.frame.size.width, screenHeight - (statusHeight + navigationHeight));
-    self.tableView = [[UITableView alloc]initWithFrame:frame style:UITableViewStylePlain];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ChatTableViewCellIdentifier];
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    self.tableView.autoresizesSubviews = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    
-    [self.view addSubview:self.tableView];
-    
-    // 设置搜索条的大小
-    self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectZero];
-    self.searchBar.placeholder = @"搜索";
-    self.searchBar.delegate = self;
-    [[UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil] setTitle:@"取消"];
-    
-    [self.searchBar sizeToFit];
-    
-    self.tableView.tableHeaderView = self.searchBar;
-    
-    self.strongSearchDisplayController = [[UISearchDisplayController alloc]initWithSearchBar:self.searchBar contentsController:self];
-    self.strongSearchDisplayController.searchResultsDataSource = self;
-    self.strongSearchDisplayController.searchResultsDelegate = self;
-    self.strongSearchDisplayController.delegate = self;
+}
+
+- (NSString *)tableViewCellIdentifier
+{
+    return @"ChatTableViewCells";
 }
 
 #pragma mark - TableView Delegate and DataSource
@@ -73,9 +49,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ChatTableViewCellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.tableViewCellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ChatTableViewCellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:self.tableViewCellIdentifier];
     }
     
     if (tableView == self.tableView) {

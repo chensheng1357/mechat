@@ -6,9 +6,8 @@
 //  Copyright (c) 2014年 Ruaho Technology. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "CoTableViewController.h"
 
-static NSString *ContactsTableViewCellIdentifier = @"ContactsTableViewCells";
-@interface CoDiscoverViewController : BaseViewController
+@interface CoDiscoverViewController : CoTableViewController
 
 @end

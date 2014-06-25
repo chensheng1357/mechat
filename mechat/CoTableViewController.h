@@ -8,6 +8,12 @@
 
 #import "BaseViewController.h"
 
-@interface CoTableViewController : BaseViewController
+static NSString *TableViewCellIdentifier = @"TableViewCells";
+@interface CoTableViewController : BaseViewController<UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong, readonly) UITableView *tableView;
+@property (nonatomic, strong) NSString *tableViewCellIdentifier;
+
+- (instancetype)initWithTableStyle:(UITableViewStyle)style;
 
 @end

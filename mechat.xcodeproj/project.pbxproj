@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		34B9D224195A6A1D00EAF1F4 /* CoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B9D223195A6A1D00EAF1F4 /* CoTableViewController.m */; };
+		34B9D227195A887500EAF1F4 /* CoSearchBarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B9D226195A887500EAF1F4 /* CoSearchBarTableViewController.m */; };
 		34CB341C19590E0700381721 /* Top100FamousPersons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 34CB341B19590E0700381721 /* Top100FamousPersons.plist */; };
 		34CB342519593E5100381721 /* header.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 34CB342419593E5100381721 /* header.jpeg */; };
 		34F7ABEE19531D7D00F2604E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F7ABED19531D7D00F2604E /* Foundation.framework */; };
@@ -45,6 +46,8 @@
 /* Begin PBXFileReference section */
 		34B9D222195A6A1D00EAF1F4 /* CoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoTableViewController.h; sourceTree = "<group>"; };
 		34B9D223195A6A1D00EAF1F4 /* CoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoTableViewController.m; sourceTree = "<group>"; };
+		34B9D225195A887500EAF1F4 /* CoSearchBarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoSearchBarTableViewController.h; sourceTree = "<group>"; };
+		34B9D226195A887500EAF1F4 /* CoSearchBarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoSearchBarTableViewController.m; sourceTree = "<group>"; };
 		34CB341B19590E0700381721 /* Top100FamousPersons.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Top100FamousPersons.plist; sourceTree = "<group>"; };
 		34CB342419593E5100381721 /* header.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = header.jpeg; sourceTree = "<group>"; };
 		34F7ABEA19531D7D00F2604E /* mechat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mechat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +199,8 @@
 				34F7AC2319531E8500F2604E /* BaseViewController.m */,
 				34B9D222195A6A1D00EAF1F4 /* CoTableViewController.h */,
 				34B9D223195A6A1D00EAF1F4 /* CoTableViewController.m */,
+				34B9D225195A887500EAF1F4 /* CoSearchBarTableViewController.h */,
+				34B9D226195A887500EAF1F4 /* CoSearchBarTableViewController.m */,
 				34F7AC2519531F0300F2604E /* CoNavigationController.h */,
 				34F7AC2619531F0300F2604E /* CoNavigationController.m */,
 				34F7AC2819531F4A00F2604E /* CoTabBarController.h */,
@@ -323,6 +328,7 @@
 				34F7AC2719531F0300F2604E /* CoNavigationController.m in Sources */,
 				34F7ABFA19531D7D00F2604E /* main.m in Sources */,
 				34F7AC3319531FAA00F2604E /* CoChatViewController.m in Sources */,
+				34B9D227195A887500EAF1F4 /* CoSearchBarTableViewController.m in Sources */,
 				34F7AC381953203000F2604E /* CoContactsViewController.m in Sources */,
 				34B9D224195A6A1D00EAF1F4 /* CoTableViewController.m in Sources */,
 				34F7AC2119531E3900F2604E /* MKNumberBadgeView.m in Sources */,

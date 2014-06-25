@@ -6,9 +6,8 @@
 //  Copyright (c) 2014年 Ruaho Technology. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "CoTableViewController.h"
 
-static NSString *MeTableViewCellIdentifier = @"MeTableViewCells";
-@interface CoMeViewController : BaseViewController
+@interface CoMeViewController : CoTableViewController
 
 @end
