@@ -29,7 +29,11 @@
     self.navigationItem.title = @"众信";
     [self setInfoNumber:6];
     
-    self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+    CGFloat statusHeight = [[UIApplication sharedApplication]statusBarFrame].size.height;
+    CGFloat navigationHeight = self.navigationController.navigationBar.frame.size.height;
+    CGRect frame = CGRectMake(0, 0, self.view.frame.size.width, screenHeight - (statusHeight + navigationHeight));
+    self.tableView = [[UITableView alloc]initWithFrame:frame style:UITableViewStylePlain];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ChatTableViewCellIdentifier];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;

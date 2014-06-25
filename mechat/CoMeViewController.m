@@ -19,15 +19,17 @@
     [super viewDidLoad];
     self.navigationItem.title = @"我";
     
-    self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+    CGFloat statusHeight = [[UIApplication sharedApplication]statusBarFrame].size.height;
+    CGFloat navigationHeight = self.navigationController.navigationBar.frame.size.height;
+    CGRect frame = CGRectMake(0, 0, self.view.frame.size.width, screenHeight - (statusHeight + navigationHeight));
+    self.tableView = [[UITableView alloc]initWithFrame:frame style:UITableViewStyleGrouped];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:MeTableViewCellIdentifier];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.tableView.autoresizesSubviews = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     self.tableView.sectionHeaderHeight = 0;
     self.tableView.sectionFooterHeight = 0;
-    
-    [self.tableView sizeToFit];
     
     [self.view addSubview:self.tableView];
 }
@@ -142,7 +144,7 @@
 - (CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     
     if (section == 3) {
-        return 0.0f;
+        return 30.0f;
     }
     
     return 10.0f;
