@@ -16,7 +16,7 @@
 @implementation CoTableViewController
 
 // 使用UITableViewStyle来构造Table View
-- (instancetype)initWithTableStyle:(UITableViewStyle)style
+- (instancetype)initWithTableViewStyle:(UITableViewStyle)style
 {
     self.style = style;
     return self;
