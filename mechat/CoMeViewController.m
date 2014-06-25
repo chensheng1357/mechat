@@ -9,7 +9,7 @@
 #import "CoMeViewController.h"
 
 @interface CoMeViewController ()<UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, strong)UITableView *tableView;
+@property (nonatomic, strong) UITableView *tableView;
 @end
 
 @implementation CoMeViewController
@@ -19,11 +19,7 @@
     [super viewDidLoad];
     self.navigationItem.title = @"我";
     
-    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
-    CGFloat statusHeight = [[UIApplication sharedApplication]statusBarFrame].size.height;
-    CGFloat navigationHeight = self.navigationController.navigationBar.frame.size.height;
-    CGRect frame = CGRectMake(0, 0, self.view.frame.size.width, screenHeight - (statusHeight + navigationHeight));
-    self.tableView = [[UITableView alloc]initWithFrame:frame style:UITableViewStyleGrouped];
+    self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:MeTableViewCellIdentifier];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;

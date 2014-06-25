@@ -9,8 +9,8 @@
 #import "CoChatViewController.h"
 
 @interface CoChatViewController ()<UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate>
-@property (nonatomic, strong)UITableView *tableView;
-@property (nonatomic, strong)UISearchBar *searchBar;
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UISearchBar *searchBar;
 @property (nonatomic, strong) UISearchDisplayController *strongSearchDisplayController;
 @property (nonatomic, copy) NSArray *famousPersons;
 @end
@@ -28,33 +28,30 @@
     
     self.navigationItem.title = @"众信";
     [self setInfoNumber:6];
-
-    CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
-    CGFloat statusHeight = [[UIApplication sharedApplication]statusBarFrame].size.height;
-    CGFloat navigationHeight = self.navigationController.navigationBar.frame.size.height;
-    CGRect frame = CGRectMake(0, 0, self.view.frame.size.width, screenHeight - (statusHeight + navigationHeight));
-    self.tableView = [[UITableView alloc]initWithFrame:frame style:UITableViewStylePlain];
+    
+    self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ChatTableViewCellIdentifier];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.tableView.autoresizesSubviews = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
     [self.view addSubview:self.tableView];
-
-//    self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectZero];
-//    self.searchBar.placeholder = @"Search";
-//    self.searchBar.delegate = self;
-//    
-//    [self.searchBar sizeToFit];
-//    
-//    self.strongSearchDisplayController = [[UISearchDisplayController alloc] initWithSearchBar:self.searchBar contentsController:self];
-//    self.searchDisplayController.searchResultsDataSource = self;
-//    self.searchDisplayController.searchResultsDelegate = self;
-//    self.searchDisplayController.delegate = self;
     
- 
+    // 设置搜索条的大小
+    self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectZero];
+    self.searchBar.placeholder = @"搜索";
+    self.searchBar.delegate = self;
+    [[UIBarButtonItem appearanceWhenContainedIn:[UISearchBar class], nil] setTitle:@"取消"];
+    
+    [self.searchBar sizeToFit];
+    
+    self.tableView.tableHeaderView = self.searchBar;
+    
+    self.strongSearchDisplayController = [[UISearchDisplayController alloc]initWithSearchBar:self.searchBar contentsController:self];
+    self.strongSearchDisplayController.searchResultsDataSource = self;
+    self.strongSearchDisplayController.searchResultsDelegate = self;
+    self.strongSearchDisplayController.delegate = self;
 }
-
 
 #pragma mark - TableView Delegate and DataSource
 
@@ -72,16 +69,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = nil;
-    if ([tableView isEqual:self.tableView]) {
-        cell = [tableView dequeueReusableCellWithIdentifier:ChatTableViewCellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ChatTableViewCellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ChatTableViewCellIdentifier];
+    }
+    
+    if (tableView == self.tableView) {
         [cell.textLabel setFont:[UIFont boldSystemFontOfSize:18]];
         cell.textLabel.text = self.famousPersons[indexPath.row];
+    } else {
+//        cell.textLabel.text = [self.filteredPersons objectAtIndex:indexPath.row];
+        cell.textLabel.text = @"测试";
     }
+    
     return cell;
 }
-
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -102,6 +104,18 @@
         }
     }
     self.navigationItem.title = title;
+}
+
+#pragma mark - UISearchBarDelegate
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+   
+}
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
+{
+    
 }
 
 - (void)didReceiveMemoryWarning
