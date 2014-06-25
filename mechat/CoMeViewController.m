@@ -27,6 +27,8 @@
     self.tableView.sectionHeaderHeight = 0;
     self.tableView.sectionFooterHeight = 0;
     
+    [self.tableView sizeToFit];
+    
     [self.view addSubview:self.tableView];
 }
 
@@ -140,11 +142,10 @@
 - (CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     
     if (section == 3) {
-        return 30.0f;
+        return 0.0f;
     }
     
     return 10.0f;
-    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
