@@ -73,6 +73,10 @@
     self.strongSearchDisplayController.searchResultsDataSource = self;
     self.strongSearchDisplayController.searchResultsDelegate = self;
     self.strongSearchDisplayController.delegate = self;
+    
+    self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
+    self.tableView.sectionIndexTrackingBackgroundColor = [UIColor clearColor];
+    self.tableView.sectionIndexColor = [UIColor grayColor];
 }
 
 
