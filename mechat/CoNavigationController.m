@@ -19,8 +19,13 @@
     [super viewDidLoad];
     
     // 设置背景
-    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"topbarbg_ios7"]
-                             forBarMetrics:UIBarMetricsDefault];
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0f) {
+        [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"topbarbg_ios7"]
+                                 forBarMetrics:UIBarMetricsDefault];
+    } else {
+        [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"topbarbg"]
+                                 forBarMetrics:UIBarMetricsDefault];
+    }
     
     // 设置title属性
     NSDictionary *titleAttrDict = @{

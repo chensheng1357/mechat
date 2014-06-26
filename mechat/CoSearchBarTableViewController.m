@@ -8,7 +8,7 @@
 
 #import "CoSearchBarTableViewController.h"
 
-@interface CoSearchBarTableViewController ()
+@interface CoSearchBarTableViewController ()<UISearchBarDelegate, UISearchDisplayDelegate>
 @property (nonatomic, strong, readwrite) UISearchBar *searchBar;
 @property (nonatomic, strong) UISearchDisplayController *strongSearchDisplayController;
 @end
@@ -29,9 +29,27 @@
     
     self.tableView.tableHeaderView = self.searchBar;
     self.strongSearchDisplayController = [[UISearchDisplayController alloc]initWithSearchBar:self.searchBar contentsController:self];
-    self.searchDisplayController.searchResultsDataSource = self;
-    self.searchDisplayController.searchResultsDelegate = self;
-    self.searchDisplayController.delegate = self;
+    self.strongSearchDisplayController.searchResultsDataSource = self;
+    self.strongSearchDisplayController.searchResultsDelegate = self;
+    self.strongSearchDisplayController.delegate = self;
+}
+
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
+{
+    if ([searchBar isEqual:self.searchBar]) {
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
+    }
+    return YES;
+}
+
+- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar
+{
+    if ([searchBar isEqual:self.searchBar]) {
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+    }
+    return YES;
 }
 
 @end

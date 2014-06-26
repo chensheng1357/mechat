@@ -8,6 +8,6 @@
 
 #import "CoTableViewController.h"
 
-@interface CoSearchBarTableViewController : CoTableViewController<UISearchBarDelegate, UISearchDisplayDelegate>
+@interface CoSearchBarTableViewController : CoTableViewController
 @property (nonatomic, strong, readonly) UISearchBar *searchBar;
 @end
