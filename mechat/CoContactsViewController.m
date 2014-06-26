@@ -20,7 +20,7 @@
     self.navigationItem.title = @"通讯录";
 }
 
-- (NSString *)textInputContextIdentifier
+- (NSString *)tableViewCellIdentifier
 {
     return @"ContactsTableViewCells";
 }

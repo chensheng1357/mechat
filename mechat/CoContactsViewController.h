@@ -6,8 +6,8 @@
 //  Copyright (c) 2014年 Ruaho Technology. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "CoSearchBarTableViewController.h"
 
-@interface CoContactsViewController : BaseViewController
+@interface CoContactsViewController : CoSearchBarTableViewController
 
 @end
