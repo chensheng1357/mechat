@@ -34,8 +34,8 @@
 
 - (void)createControllers
 {
-    CoChatViewController *coChatViewController = [[CoChatViewController alloc]init];
-    CoContactsViewController *coContactsViewController = [[CoContactsViewController alloc]init];
+    CoChatViewController *coChatViewController = [[CoChatViewController alloc]initWithSectionIndexes:NO];
+    CoContactsViewController *coContactsViewController = [[CoContactsViewController alloc]initWithSectionIndexes:YES];
     CoDiscoverViewController *coDiscoverViewController = [[CoDiscoverViewController alloc]initWithStyle:UITableViewStyleGrouped];
     CoMeViewController *coMeViewController = [[CoMeViewController alloc]initWithStyle:UITableViewStyleGrouped];
     
